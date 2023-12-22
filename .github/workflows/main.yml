@@ -13,7 +13,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        model: [ "N976B", "N976N", "G973F" ]
+        model: [ "N976B", "N976N", "G975F" ]
 
     steps:
       - uses: actions/checkout@v3
@@ -55,7 +55,7 @@ jobs:
           set -e -o pipefail
           ./cruelbuild config                    \
                        model=${{ matrix.model }} \
-                       name="4lu-Cruel"                \
+                       name="testo"                \
                        toolchain=$TOOLCHAIN      \
                        -magisk             \
                        +kernelsu             \
